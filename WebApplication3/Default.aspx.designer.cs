@@ -7,10 +7,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WebApplication3 {
+namespace Neo4JDemo {
     
     
-    public partial class _Default {
+    public partial class Default {
         
         /// <summary>
         /// TextBox1 control.
@@ -47,5 +47,14 @@ namespace WebApplication3 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Ergebnisse;
+        
+        /// <summary>
+        /// actorslist control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ListBox actorslist;
     }
 }

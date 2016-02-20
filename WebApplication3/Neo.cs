@@ -1,29 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Web.Providers.Entities;
+﻿using System.Collections.Generic;
 using Neo4jClient;
-using WebApplication3.Entities;
+using Neo4JDemo.Entities;
 
-namespace WebApplication3
+namespace Neo4JDemo
 {
     public class Neo : INeo4JClient
     {
-        private GraphClient _client;
-        public Neo()
-        {
-            _client = GetClient();
+        private IGraphClient _graphClient;
 
-            _client.Connect();
-        }
-
-        public GraphClient GetClient()
+        public Neo(IGraphClient graphClient)
         {
-            return new GraphClient(new Uri("http://localhost:7474/db/data"), "neo4j", "rhd16");
+            _graphClient = graphClient;
+            _graphClient.Connect();
         }
 
         public IEnumerable<Person> GetActorsBy(string movieTitle)
         {
-            var results = _client.Cypher
+            var results = _graphClient.Cypher
                 .Match("(m:Movie)<-[:ACTED_IN]-(p:Person)")
                 .Where((Movie m) => m.title == movieTitle)
                 .Return(p => p.As<Person>())
@@ -31,6 +24,4 @@ namespace WebApplication3
             return results;
         }
     }
-
-
 }

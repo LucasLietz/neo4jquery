@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="WebApplication3._Default" %>
+﻿<%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="Neo4JDemo.Default" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
@@ -15,8 +15,14 @@
             <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Button" />
         </p>
         <p class="lead">
-            <asp:Label ID="Ergebnisse" Visible="False" runat="server" Text="Label"></asp:Label>
+            <asp:Label ID="Ergebnisse" Visible="False" runat="server" Text=""></asp:Label>
+            
         </p>
+        <p class="lead">
+            <asp:ListBox ID="actorslist" runat="server" Height="167px" Width="219px"></asp:ListBox>
+            
+        </p>
+
     </div>
 
 </asp:Content>

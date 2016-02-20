@@ -1,13 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using Neo4jClient;
+﻿using System.Collections.Generic;
+using Neo4JDemo.Entities;
 
-namespace WebApplication3
+namespace Neo4JDemo
 {
     public interface INeo4JClient
     {
-        GraphClient GetClient();
+        IEnumerable<Person> GetActorsBy(string movieTitle);
     }
 }
