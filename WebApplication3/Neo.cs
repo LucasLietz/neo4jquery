@@ -18,14 +18,14 @@ namespace WebApplication3
 
         public GraphClient GetClient()
         {
-            return new GraphClient(new Uri("http://localhost:7474/db/data"),"neo4j", "rhd16");
+            return new GraphClient(new Uri("http://localhost:7474/db/data"), "neo4j", "rhd16");
         }
 
-        public IEnumerable<Person> GetActorsBy(string title)
+        public IEnumerable<Person> GetActorsBy(string movieTitle)
         {
             var results = _client.Cypher
                 .Match("(m:Movie)<-[:ACTED_IN]-(p:Person)")
-                .Where((Movie m) => m.title == title)
+                .Where((Movie m) => m.title == movieTitle)
                 .Return(p => p.As<Person>())
                 .Results;
             return results;

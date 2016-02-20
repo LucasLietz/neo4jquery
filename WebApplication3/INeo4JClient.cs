@@ -8,8 +8,6 @@ namespace WebApplication3
 {
     public interface INeo4JClient
     {
-
-            GraphClient GetClient();
-
+        GraphClient GetClient();
     }
 }

@@ -1,0 +1,12 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="WebApplication3.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="loginname" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">neo4j</Value>
+    </Setting>
+    <Setting Name="loginpassword" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">rhd16</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
