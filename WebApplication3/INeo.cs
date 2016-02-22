@@ -3,8 +3,9 @@ using Neo4JDemo.Entities;
 
 namespace Neo4JDemo
 {
-    public interface INeo4JClient
+    public interface INeo
     {
         IEnumerable<Person> GetActorsBy(string movieTitle);
+        IEnumerable<Movie> GetMovieBy(string actorsName);
     }
 }
