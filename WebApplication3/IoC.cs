@@ -1,5 +1,7 @@
 ﻿using System.Reflection;
 using Neo4jClient;
+using Neo4JDemo.Entities;
+using Neo4JDemo.Interfaces;
 using Ninject;
 using Ninject.Modules;
 
@@ -28,6 +30,8 @@ namespace Neo4JDemo
         {
             Bind<INeo>().To<Neo>();
             Bind<IGraphClient>().To<GraphClient>();
+            Bind<IPerson>().To<Person>();
+            Bind<IMovie>().To<Movie>();
         }
     }
 }

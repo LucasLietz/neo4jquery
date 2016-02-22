@@ -25,6 +25,7 @@ namespace Neo4JDemo
                 IEnumerable<Person> persons;
                 IEnumerable<Movie> movies;
 
+                //TODO - 
                 var neo = new Neo(new GraphClient(new Uri("http://localhost:7474/db/data"), "neo4j", "rhd16"));
 
                 if (Equals(RadioButtonList1.SelectedItem, RadioButtonList1.Items.FindByText(ActorsOfAMovie)))
